@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FileUtility">
+    <Position X="6.75" Y="1.75" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAYAAAAAAAAA=</HashCode>
+      <FileName>FileUtility.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logger">
+    <Position X="12.5" Y="1.75" Width="5.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Logger::LOG_LEVEL" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Logger.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAIAAAAAAAAACAAAAACAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Logger.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoggerSetting">
+    <Position X="1" Y="1.75" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAABAAAAEAAAAAAAAAAAAAAAAAAEgAIAA=</HashCode>
+      <FileName>LoggerSetting.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
