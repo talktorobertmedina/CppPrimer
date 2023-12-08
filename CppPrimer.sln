@@ -13,6 +13,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Logger", "Logger\Logger.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PropertyLibrary", "PropertyLibrary\PropertyLibrary.vcxproj", "{7C83E9E5-90D4-4610-97DB-88B87F8E5B14}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PropertyLibraryTest", "PropertyLibraryTest\PropertyLibraryTest.vcxproj", "{254F89D5-522E-4790-A10E-46076750652F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7C83E9E5-90D4-4610-97DB-88B87F8E5B14} = {7C83E9E5-90D4-4610-97DB-88B87F8E5B14}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +66,14 @@ Global
 		{7C83E9E5-90D4-4610-97DB-88B87F8E5B14}.Release|x64.Build.0 = Release|x64
 		{7C83E9E5-90D4-4610-97DB-88B87F8E5B14}.Release|x86.ActiveCfg = Release|Win32
 		{7C83E9E5-90D4-4610-97DB-88B87F8E5B14}.Release|x86.Build.0 = Release|Win32
+		{254F89D5-522E-4790-A10E-46076750652F}.Debug|x64.ActiveCfg = Debug|x64
+		{254F89D5-522E-4790-A10E-46076750652F}.Debug|x64.Build.0 = Debug|x64
+		{254F89D5-522E-4790-A10E-46076750652F}.Debug|x86.ActiveCfg = Debug|Win32
+		{254F89D5-522E-4790-A10E-46076750652F}.Debug|x86.Build.0 = Debug|Win32
+		{254F89D5-522E-4790-A10E-46076750652F}.Release|x64.ActiveCfg = Release|x64
+		{254F89D5-522E-4790-A10E-46076750652F}.Release|x64.Build.0 = Release|x64
+		{254F89D5-522E-4790-A10E-46076750652F}.Release|x86.ActiveCfg = Release|Win32
+		{254F89D5-522E-4790-A10E-46076750652F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

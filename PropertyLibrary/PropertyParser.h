@@ -4,9 +4,10 @@
 #include <string>
 #include <any>
 
-class PropertyParser
+class __declspec(dllexport) PropertyParser
 {
 public:
-	static const std::map<std::string, std::any> parse(std::string data);
+	typedef std::map<std::string, std::any> PropertyAnyMap;
+	static const PropertyAnyMap parse(std::string data);
 };
 
