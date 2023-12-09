@@ -4,18 +4,22 @@
 
 const PropertyParser::PropertyAnyMap PropertyParser::parse(std::string data)
 {
-	size_t startIndex = 0;
-	size_t endItr = 0;
+	const size_t NEWLINE_CHARACTER = 1;
 	size_t dataSize = data.size();
-	char
-	// https://en.cppreference.com/w/cpp/string/basic_string/find
-	for (size_t itr = 0; itr <= dataSize; ++itr)
+	if (dataSize <= 0)
 	{
-		if (*itr == '=')
-		{
-			std::distance(startItr, itr);
-		}
+		throw std::invalid_argument("Cannot parse empty string");
 	}
 
-	return PropertyParser::PropertyAnyMap();
+	PropertyParser::PropertyAnyMap propertyMap;
+	// "A=1\nB=2\nC=3\nD=4\nE=5\n"
+	for (size_t lineStartIndex = 0, lineEndIndex = data.find('\n', lineStartIndex); lineEndIndex < std::string::npos; lineStartIndex = lineEndIndex + NEWLINE_CHARACTER, lineEndIndex = data.find('\n', lineStartIndex))
+	{
+		size_t delimiterIndex = data.find('=', lineStartIndex);
+		std::string keyName = data.substr(lineStartIndex, delimiterIndex - lineStartIndex);
+		std::string mappedValue = data.substr(delimiterIndex + 1, lineEndIndex - delimiterIndex - NEWLINE_CHARACTER);
+		propertyMap[keyName] = mappedValue;
+	}
+
+	return propertyMap;
 }

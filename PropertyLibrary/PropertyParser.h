@@ -2,14 +2,12 @@
 
 #include <map>
 #include <string>
-#include <any>
 
 class __declspec(dllexport) PropertyParser
 {
 public:
-	typedef std::map<std::string, std::any> PropertyAnyMap;
+	typedef std::map<std::string, std::string> PropertyAnyMap;
 	static const PropertyAnyMap parse(std::string data);
 private:
 
 };
-
