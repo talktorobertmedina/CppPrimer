@@ -23,7 +23,6 @@ int main(int argc, char** argv)
 {
 	std::string name("LoggerSettings.txt");
 	std::string settingFileData = FileUtility::read(name);
-	std::cout << settingFileData << std::endl;
 	LoggerSetting loggerSetting = LoggerSetting::parse(settingFileData);
 	Logger logger = Logger(loggerSetting);
 	logger.log(Logger::LOG_LEVEL::INFO, "hello world");

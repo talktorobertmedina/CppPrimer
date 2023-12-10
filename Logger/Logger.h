@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <map>
 
 class LoggerSetting;
 class Logger
@@ -10,12 +11,13 @@ public:
 		INFO, WARNING, DEBUG, ERROR, SEVERE
 	};
 	static const char* LOG_LEVEL_STRING[];
+	static const std::map<std::string, LOG_LEVEL> LOG_LEVEL_ENUM;
 
 	Logger();
 	Logger(const LoggerSetting& loggerSetting);
 	~Logger();
-	void log(Logger::LOG_LEVEL level, const std::string& message) const;
+	void log(LOG_LEVEL level, const std::string& message) const;
 private:
-	Logger::LOG_LEVEL m_level;
+	LOG_LEVEL m_level;
 };
 

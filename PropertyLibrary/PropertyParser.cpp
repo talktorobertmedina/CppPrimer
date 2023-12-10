@@ -12,7 +12,6 @@ const PropertyParser::PropertyAnyMap PropertyParser::parse(std::string data)
 	}
 
 	PropertyParser::PropertyAnyMap propertyMap;
-	// "A=1\nB=2\nC=3\nD=4\nE=5\n"
 	for (size_t lineStartIndex = 0, lineEndIndex = data.find('\n', lineStartIndex); lineEndIndex < std::string::npos; lineStartIndex = lineEndIndex + NEWLINE_CHARACTER, lineEndIndex = data.find('\n', lineStartIndex))
 	{
 		size_t delimiterIndex = data.find('=', lineStartIndex);
