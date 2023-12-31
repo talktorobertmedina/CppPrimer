@@ -9,5 +9,5 @@ public:
 	typedef std::map<std::string, std::string> PropertyAnyMap;
 	static const PropertyAnyMap parse(std::string data);
 private:
-
+	static const char LINE_ENDING_DELIMITER;
 };
