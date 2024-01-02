@@ -79,7 +79,4 @@ TEST(PropertyParserTest, PropertyParserTest_parse) {
 	EXPECT_EQ("3", multipleKeys["C"]);
 	EXPECT_EQ("4", multipleKeys["D"]);
 	EXPECT_EQ("5", multipleKeys["E"]);
-
-  //EXPECT_EQ(1, 1);
-  //EXPECT_TRUE(true);
 }

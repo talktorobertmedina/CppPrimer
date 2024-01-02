@@ -19,11 +19,20 @@ public:
 	static const LoggerSetting parse(std::string logSettingData);
 	LoggerSetting();
 	virtual ~LoggerSetting();
-	Logger::LOG_LEVEL getLevel();
+	[[nodiscard]] Logger::LOG_LEVEL getLevel() const;
 	bool setLevel(Logger::LOG_LEVEL level);
+	[[nodiscard]] std::string getMessageTemplate() const;
 	bool setMessageTemplate(std::string messageTemplateFormat);
+	[[nodiscard]] uint8_t getFlags() const;
 private:
-	Logger::LOG_LEVEL m_level;
-	// LOG_MESSAGE_TEMPLATE = [% t][% l][% cn][% fn][% lc] : [% msg]
+	static const std::string PRINT_TIME_STRING;
+	static const std::string PRINT_LOG_LEVEL_STRING;
+	static const std::string PRINT_CLASS_NAME_STRING;
+	static const std::string PRINT_FUNC_NAME_STRING;
+	static const std::string PRINT_LINE_COUNT_STRING;
+	static const std::string PRINT_MESSAGE_STRING;
 
+	Logger::LOG_LEVEL m_level;
+	std::uint8_t m_flags;
+	std::string m_messageTemplate;
 };
