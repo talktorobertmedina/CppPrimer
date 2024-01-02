@@ -35,7 +35,7 @@ const PropertyParser::PropertyAnyMap PropertyParser::parse(std::string data)
 		std::string keyName = data.substr(lineStartIndex, delimiterIndex - lineStartIndex);
 		std::string mappedValue = data.substr(delimiterIndex + 1, lineEndIndex - delimiterIndex - NEWLINE_CHARACTER);
 
-		if (keyName.empty() || mappedValue.empty())
+		if (!PropertyParser::isKeyIdentiferValid(keyName) || !PropertyParser::isKeyIdentiferValid(mappedValue))
 		{
 			throw std::invalid_argument("Failed to find a valid key-value pair on line: " + std::to_string(lineNumber));
 		}
@@ -44,4 +44,25 @@ const PropertyParser::PropertyAnyMap PropertyParser::parse(std::string data)
 	}
 
 	return propertyMap;
+}
+
+const bool PropertyParser::isKeyIdentiferValid(std::string identifier)
+{
+	if (identifier.empty())
+	{
+		return false;
+	}
+	// TODO: valid characters are: letter, underscore, numbers
+	// TODO: must start with a letter
+	return true;
+}
+
+const bool PropertyParser::isKeyValueValid(std::string keyValue)
+{
+	if (keyValue.empty())
+	{
+		return false;
+	}
+	// TODO: accept all until their is reason not to
+	return true;
 }

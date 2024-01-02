@@ -1,1 +1,2 @@
 LOG_LEVEL=INFO
+LOG_MESSAGE_TEMPLATE=[%t] [%l] [%cn] [%fn] [%lc] : [%msg]

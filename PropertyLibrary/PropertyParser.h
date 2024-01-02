@@ -10,4 +10,6 @@ public:
 	static const PropertyAnyMap parse(std::string data);
 private:
 	static const char LINE_ENDING_DELIMITER;
+	static const bool isKeyIdentiferValid(std::string identifier);
+	static const bool isKeyValueValid(std::string keyValue);
 };
