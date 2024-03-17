@@ -45,4 +45,11 @@ int main()
 	addCounterX(&total);
 	printf("After: %d\n", total);
 	printPointerArithmetic();
+
+	int i = 420;
+	printf("what is i: %d\n", i);
+	int* pi = &i;
+	printf("what is i: %d\n", i);
+	*pi = 0;
+	printf("what is i: %d\n", i);
 }

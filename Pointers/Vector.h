@@ -11,5 +11,5 @@ public:
 	int size() override;
 private:
 	int storage[INITIAL_SIZE];
-	int size;
+	int _size;
 };
